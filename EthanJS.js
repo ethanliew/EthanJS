@@ -86,6 +86,7 @@ EthanJS.Ajax = (function () {
 
 
     function _ajax_post_with_custom_header(url, headerName, headerValue, data, done, fail) {
+	$.support.cors = true; // ajax cross domain call
         $.ajax({
             type: 'POST',
             cache: false,
